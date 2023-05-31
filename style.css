@@ -1,0 +1,377 @@
+/* تنسيق عام */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    transition: 0.5s;
+
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10%;
+    background-color: #fff;
+}
+  a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+  
+  /* شريط العنوان */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+  
+  /* الشعار */
+  .logo {
+    font-size: 26px;
+    font-weight: 800;
+  }
+  
+  /* قائمة الروابط */
+  .menu-container {
+    display: none; /* يمكنك تغيير العرض حسب احتياجاتك */
+  }
+  
+  /* أيقونات القائمة */
+  .menu-icons-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* تقدم عملية الشراء */
+  .progress-checkout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* قم بتعديل القيمة حسب احتياجاتك */
+  }
+  
+  /* خطوة التقدم */
+  .progress-step-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* مربع الخطوة */
+  .step-check {
+    background-color: rgb(0, 132, 255);
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    position: relative;
+    background-image: url(Resources/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+  }
+  .contaier{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10%;
+}
+  
+  
+  .progress-step-container:nth-of-type(3) .step-check::after {
+    display: none;
+  }
+  
+  .progress-step-container:nth-of-type(3) .step-check {
+    background-image: none;
+    background-color: white;
+    border: 2px solid grey;
+  }
+  
+  .progress-step-container:nth-of-type(2) .step-check::after {
+    background-color: grey;
+  }
+  
+  .progress-step-container:nth-of-type(2) .step-check {
+    background-image: none;
+    background-color: white;
+    border: 2px solid rgb(0, 132, 255);
+  }
+  
+  .step-check::after {
+    content: "";
+    width: 15vw;
+    height: 2px;
+    background-color: inherit;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+  }
+  
+  .step-title {
+    color: grey;
+  }
+  
+  /* نموذج المدخلات */
+  .form-container {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  /* عنوان النموذج */
+  .form-title {
+    font-size: 36px;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+    opacity: 0.8;
+  }
+  
+  /* نموذج الخروج */
+  .checkout-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* سطر المدخلات */
+  .input-line {
+    --height: 36px;
+    /* display: flex; */
+    /* max-width: 453px; */
+    /* border: 1px solid #999; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  .copy-link-input{
+    padding: 0 8px;
+    font-size: 14px;
+    border: 1px solid #999;
+    flex-grow: 1;
+    border-right: none;
+    outline: none;
+}
+.copy-link-input:hover{
+  background-color: #eeeeee;
+}
+.copy-link-button{
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 37px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dddddd;
+  color: #333333;
+  border:1px solid #cccccc
+}
+.copy-link-button:hover{
+  background-color: #cccccc;
+}
+  
+  /* التسمية */
+  label {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* حقل الإدخال */
+  input[type="text"] {
+    width: 105%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    border: none;
+    outline: none;
+  }
+  
+  /* نص المساعدة في حقل الإدخال */
+  input[type="text"]::placeholder {
+    font-size: 14px;
+    color: #b9b9b9;
+  }
+
+  
+.owner{
+  width: 117%;
+  margin-right: 14px;
+}
+
+
+
+.input-field{
+  border-radius: 53px;
+  height: 55px;
+  display: flex;
+  max-width: 100%;
+
+}
+.copy-link-input{
+  font-size: .75rem;
+  height: 46px;
+  width: 110%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 800;
+}
+.copy-link-input:hover{
+  background-color: #eeeeee;
+}
+.copy-link-button{
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 37px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dddddd;
+  color: #333333;
+  border: 1px solid #cccccc;
+  /* border-radios: 117px; */
+  border-radius: 5px;
+}
+.copy-link-button:hover{
+  background-color: #cccccc;
+}
+
+.input-field input{
+  font-size: .78rem;
+  height: 42px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 800;
+
+}
+
+
+  
+  /* حاوية حقول الإدخال */
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* للتعامل مع الشاشات الضيقة */
+  }
+  
+  .input-container .input-line {
+    width: 100%; /* تم تغيير العرض ليصبح 100% بدلاً من 48% */
+  }
+  
+  /* زر الاستكمال */
+  input[type="button"] {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="button"]:hover {
+    background-color: rgb(4, 88, 167);
+  }
+  .lo{
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 0.5rem;
+}
+  
+  /* الصورة */
+  .img {
+    margin-top: 47px;
+    width: 25%;
+  }
+.note{
+    color: red;
+    margin: 5px;
+}  
+.imalo{
+  width: 7%;
+}
+
+.buto{
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: gold;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  /* font-size: 18px; */
+  transition: 0.5s;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.buto:hover{
+  background-color: rgb(248, 244, 244);
+  color: white;
+}
+.money{
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* font-size: small; */
+  margin: 10px;
+  color: red;
+}
+.butoo{
+  border-radius: 52px;
+  position: relative;
+  width: 50%;
+  min-height: 7vh;
+  background-color: #e8f4fae5;
+  /* background-image: linear-gradient(rgb(4 9 30 / 0%) , rgb(4 9 30 / 0%)) ,url(IMG-20230529-WA0057.jpg); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* border: 3px solid blue; */
+  border-color: rgb(66, 160, 242);
+}
